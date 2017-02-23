@@ -102,6 +102,15 @@ gulp.task('styles', () => {
     .pipe(gulp.dest('.tmp/styles'));
 });
 
+// import .html files into .html files and then compile into dist
+var htmlImport = require('gulp-html-import');
+
+gulp.task('import', function () {
+    gulp.src('./app/index.html')
+        .pipe(htmlImport('./app/patterns/'))
+        .pipe(gulp.dest('dist'));
+});
+
 // Concatenate and minify JavaScript. Optionally transpiles ES2015 code to ES5.
 // to enable ES2015 support remove the line `"only": "gulpfile.babel.js",` in the
 // `.babelrc` file.
@@ -201,6 +210,18 @@ gulp.task('default', ['clean'], cb =>
     'generate-service-worker',
     cb
   )
+);
+
+// Run Autoprefixer
+const autoprefixer = require('gulp-autoprefixer');
+
+gulp.task('default', () =>
+    gulp.src('src/app.css')
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
+        .pipe(gulp.dest('dist'))
 );
 
 // Run PageSpeed Insights

@@ -1,0 +1,46 @@
+// Variables
+
+// Table of Contents
+//
+// Colors
+// Body
+
+
+// General variable structure
+//
+// Variable format should follow the `$component-modifier-state-property` order.
+
+
+// Colors
+//
+// Grayscale and brand colors.
+
+// Start with assigning color names to specific hex values.
+$color-white:     #fff;
+$color-black:     #000;
+$color-blue:      #3e7ebe;
+$color-raspberry: #c5246E;
+$color-green:     #81af45;
+$color-pupkin:    #ffb441;
+$color-purple:    #885087;
+$color-teal:      #24bec5;
+$color-yellow:    #f1c719;
+
+// Create grayscale
+$gray-dark:       #666666;
+$gray-light:      #bbbbbb;
+$gray-web-1:      #e5e5e5;
+$gray-web-2:      #f9f9f9;
+
+// Reassign color vars to semantic color scheme
+$color-functional-red:    #ff0000;
+$color-functional-yellow: #fff200;
+$color-functional-green:  #00af43;
+$color-functional-blue:   #9ec4eb;
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-bg:     $color-white;
+$body-color:  $gray-dark;
